@@ -1,0 +1,95 @@
+[
+  {
+    "orderId": "ORD-6177",
+    "customerPhone": "+919988776655",
+    "customerName": "गणेश जाधव (शेतकरी)",
+    "address": "मु. पो. मंठा, जि. जालना",
+    "items": [
+      {
+        "productId": "const-angle-01",
+        "productName": "एमएस अँगल (लोखंडी अँगल)",
+        "brand": "ISI Standard Rolling",
+        "selectedSize": "40×40 (जाडी 5mm/6mm)",
+        "quantity": 50,
+        "unit": "Kg",
+        "unitPrice": 56,
+        "totalPrice": 2800
+      }
+    ],
+    "totalAmount": 2800,
+    "status": "PENDING",
+    "createdAt": "2026-10-11T09:57:12.982Z"
+  },
+  {
+    "orderId": "ORD-1907",
+    "customerPhone": "+919988776655",
+    "customerName": "गणेश जाधव (शेतकरी)",
+    "address": "मु. पो. मंठा, जि. जालना",
+    "items": [
+      {
+        "productId": "const-angle-01",
+        "productName": "एमएस अँगल (लोखंडी अँगल)",
+        "brand": "ISI Standard Rolling",
+        "selectedSize": "40×40 (जाडी 5mm/6mm)",
+        "quantity": 50,
+        "unit": "Kg",
+        "unitPrice": 56,
+        "totalPrice": 2800
+      }
+    ],
+    "totalAmount": 2800,
+    "status": "PENDING",
+    "createdAt": "2026-10-11T07:57:48.984Z"
+  },
+  {
+    "orderId": "ORD-3220",
+    "customerPhone": "+919988776655",
+    "customerName": "गणेश जाधव (शेतकरी)",
+    "address": "मु. पो. मंठा, जि. जालना",
+    "items": [
+      {
+        "productId": "const-angle-01",
+        "productName": "एमएस अँगल (लोखंडी अँगल)",
+        "brand": "ISI Standard Rolling",
+        "selectedSize": "40×40 (जाडी 5mm/6mm)",
+        "quantity": 50,
+        "unit": "Kg",
+        "unitPrice": 56,
+        "totalPrice": 2800
+      }
+    ],
+    "totalAmount": 2800,
+    "status": "PENDING",
+    "createdAt": "2026-10-11T07:56:27.078Z"
+  },
+  {
+    "orderId": "ORD-1001",
+    "customerPhone": "+919822100000",
+    "customerName": "रमेश शिंदे (शेतकरी)",
+    "address": "मु. पो. वाडी, ता. जि. जालना",
+    "items": [
+      {
+        "productId": "seed-cot-01",
+        "productName": "Rasi 659 BG II (राशी ६५९)",
+        "brand": "Rasi Seeds",
+        "quantity": 5,
+        "unit": "पाकीट",
+        "unitPrice": 864,
+        "totalPrice": 4320
+      },
+      {
+        "productId": "fert-urea-01",
+        "productName": "IFFCO Neem Coated Urea",
+        "brand": "IFFCO",
+        "quantity": 4,
+        "unit": "बॅग",
+        "unitPrice": 266.5,
+        "totalPrice": 1066
+      }
+    ],
+    "totalAmount": 5386,
+    "status": "CONFIRMED",
+    "createdAt": "2026-10-10T10:30:00.000Z",
+    "notes": "उद्या सकाळी गाडी पाठवा"
+  }
+]

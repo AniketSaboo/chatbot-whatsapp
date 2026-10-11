@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Production Build
+dist/
+
+# WhatsApp Session Auth (CRITICAL: Do not upload WhatsApp keys to GitHub)
+auth_info_baileys/
+
+# Environment Secrets
+.env
+
+# Logs
+*.log
+npm-debug.log*
+
+# System Files
+.DS_Store
+Thumbs.db

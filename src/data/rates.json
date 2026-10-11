@@ -1,0 +1,110 @@
+[
+  {
+    "id": "rate-cement-ambuja",
+    "category": "सिमेंट (Cement)",
+    "item": "Ambuja Cement (PPC 50kg)",
+    "rate": "₹३६५",
+    "unit": "प्रति बॅग (50 kg)",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "ताजी बॅच उपलब्ध"
+  },
+  {
+    "id": "rate-cement-ultratech",
+    "category": "सिमेंट (Cement)",
+    "item": "UltraTech Cement (Super 50kg)",
+    "rate": "₹३७०",
+    "unit": "प्रति बॅग (50 kg)",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "सर्वोत्तम दर्जा"
+  },
+  {
+    "id": "rate-cement-acc",
+    "category": "सिमेंट (Cement)",
+    "item": "ACC Concrete+ (50kg)",
+    "rate": "₹३५५",
+    "unit": "प्रति बॅग (50 kg)",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "उपलब्ध"
+  },
+  {
+    "id": "rate-steel-tata",
+    "category": "स्टील / TMT Steel",
+    "item": "Tata Tiscon 550D (सर्व साइज)",
+    "rate": "₹६२,५००",
+    "unit": "प्रति टन (₹६२.५०/किलो)",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "GST सह दर"
+  },
+  {
+    "id": "rate-steel-jsw",
+    "category": "स्टील / TMT Steel",
+    "item": "JSW Neosteel 550D",
+    "rate": "₹५९,८००",
+    "unit": "प्रति टन (₹५९.८०/किलो)",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "GST सह दर"
+  },
+  {
+    "id": "rate-steel-rajuri",
+    "category": "स्टील / TMT Steel",
+    "item": "Rajuri / Polad Steel 550D",
+    "rate": "₹५४,५००",
+    "unit": "प्रति टन (₹५४.५०/किलो)",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "किफायतशीर व मजबूत"
+  },
+  {
+    "id": "rate-ms-angle",
+    "category": "लोखंडी अँगल व चॅनल",
+    "item": "MS Angle (सर्व साइज सरासरी)",
+    "rate": "₹५६",
+    "unit": "प्रति किलो",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "दर्जेदार रोलिंग"
+  },
+  {
+    "id": "rate-ms-channel",
+    "category": "लोखंडी अँगल व चॅनल",
+    "item": "MS Channel (75/100/125)",
+    "rate": "₹५७",
+    "unit": "प्रति किलो",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "उपलब्ध"
+  },
+  {
+    "id": "rate-fertilizer-urea",
+    "category": "रासायनिक खते (Fertilizers)",
+    "item": "Urea (Neem Coated 45kg)",
+    "rate": "₹२६६.५०",
+    "unit": "प्रति बॅग (शासकीय दर)",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "आधार कार्ड व POS मशीन द्वारे"
+  },
+  {
+    "id": "rate-fertilizer-dap",
+    "category": "रासायनिक खते (Fertilizers)",
+    "item": "DAP 18:46:0 (50kg)",
+    "rate": "₹१,३५०",
+    "unit": "प्रति बॅग",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "IFFCO / IPL"
+  },
+  {
+    "id": "rate-fertilizer-npk",
+    "category": "रासायनिक खते (Fertilizers)",
+    "item": "NPK 10:26:26 (50kg)",
+    "rate": "₹१,४७०",
+    "unit": "प्रति बॅग",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "उपलब्ध"
+  },
+  {
+    "id": "rate-seeds-cotton",
+    "category": "कापूस बियाणे",
+    "item": "Rasi 659 / US 7067 (BG II)",
+    "rate": "₹८६४",
+    "unit": "प्रति पाकीट (475 gm)",
+    "updatedAt": "आजचे ताजे दर",
+    "notes": "शासनमान्य दर"
+  }
+]

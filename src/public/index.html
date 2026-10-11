@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vallabh Seeds & Fertilizers | WhatsApp Business Bot</title>
+  <!-- Google Fonts: Baloo 2 for Marathi, Outfit for UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22><text y=%2226%22 font-size=%2226%22>🌾</text></svg>">
+</head>
+<body class="dark-theme">
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-badge">
+        <span class="brand-icon">🌾</span>
+        <div>
+          <h1 class="brand-title">Vallabh Seeds & Fertilizers</h1>
+          <p class="brand-sub">वल्लभ सीड्स अँड फर्टिलायझर्स • WhatsApp Bot Suite</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="header-nav">
+      <button class="nav-tab active" id="tab-simulator-btn" onclick="switchView('simulator')">
+        <span class="tab-icon">📱</span>
+        <span>WhatsApp सिम्युलेटर</span>
+      </button>
+      <button class="nav-tab" id="tab-admin-btn" onclick="switchView('admin')">
+        <span class="tab-icon">⚙️</span>
+        <span>व्यवस्थापन पोर्टल (Admin)</span>
+      </button>
+    </div>
+
+    <div class="header-right">
+      <div class="status-indicator">
+        <span class="status-dot pulse"></span>
+        <span class="status-text">बॉट सक्रिय (Live)</span>
+      </div>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="थीम बदला">🌓</button>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-container">
+
+    <!-- VIEW 1: WhatsApp Simulator View -->
+    <section id="view-simulator" class="view-panel active">
+      <div class="simulator-layout">
+
+        <!-- Left Column: Scenario & Flow Testers -->
+        <aside class="sidebar-scenarios">
+          <div class="glass-card">
+            <div class="card-header">
+              <span class="card-icon">⚡</span>
+              <h3>द्रुत चाचणी (Quick Scenarios)</h3>
+            </div>
+            <p class="card-desc">ग्राहकाप्रमाणे एका क्लिकवर वेगवेगळ्या प्रक्रिया तपासा:</p>
+
+            <div class="scenario-buttons">
+              <button class="scenario-btn" onclick="sendQuickMessage('Hi')">
+                <span class="sc-badge">१</span>
+                <div class="sc-info">
+                  <strong>प्रारंभिक संदेश (Start / "Hi")</strong>
+                  <span>मुख्य मेनू व स्वागत संदेश</span>
+                </div>
+              </button>
+
+              <button class="scenario-btn" onclick="runScenarioCotton()">
+                <span class="sc-badge">२</span>
+                <div class="sc-info">
+                  <strong>कापूस बियाणे (Cotton Seeds)</strong>
+                  <span>शेती साहित्य ➔ बियाणे ➔ कापूस ➔ राशी ६५९</span>
+                </div>
+              </button>
+
+              <button class="scenario-btn" onclick="runScenarioFertilizers()">
+                <span class="sc-badge">३</span>
+                <div class="sc-info">
+                  <strong>खते निवड (Fertilizers)</strong>
+                  <span>खते ➔ युरिया व डीएपी कॅटलॉग</span>
+                </div>
+              </button>
+
+              <button class="scenario-btn" onclick="runScenarioPesticides()">
+                <span class="sc-badge">४</span>
+                <div class="sc-info">
+                  <strong>कीटकनाशक सल्लागार विझार्ड</strong>
+                  <span>पीक ➔ समस्या ➔ तज्ज्ञ सल्ला / औषध</span>
+                </div>
+              </button>
+
+              <button class="scenario-btn" onclick="runScenarioSteelAngle()">
+                <span class="sc-badge">५</span>
+                <div class="sc-info">
+                  <strong>बांधकाम MS अँगल (Size Selector)</strong>
+                  <span>बांधकाम ➔ MS Angle ➔ ४०x४० ➔ ५० किलो</span>
+                </div>
+              </button>
+
+              <button class="scenario-btn" onclick="runScenarioCementRates()">
+                <span class="sc-badge">६</span>
+                <div class="sc-info">
+                  <strong>सिमेंट व ताजे भाव (Today's Rates)</strong>
+                  <span>Ambuja व UltraTech आजचे दर</span>
+                </div>
+              </button>
+
+              <button class="scenario-btn" onclick="sendQuickMessage('#')">
+                <span class="sc-badge">७</span>
+                <div class="sc-info">
+                  <strong>माझी ऑर्डर व चेकआउट (Cart)</strong>
+                  <span>ऑर्डर सारांश व पावती निर्मिती</span>
+                </div>
+              </button>
+
+              <button class="scenario-btn" onclick="sendQuickMessage('9')">
+                <span class="sc-badge">८</span>
+                <div class="sc-info">
+                  <strong>दुकानाशी संपर्क व तज्ज्ञ कॉल</strong>
+                  <span>फोन, पत्ता, गुगल मॅप्स व कृषी सल्लागार</span>
+                </div>
+              </button>
+            </div>
+
+            <div class="test-controls">
+              <button class="btn-secondary" onclick="resetConversation()">
+                🔄 चॅट रीसेट करा (Reset)
+              </button>
+            </div>
+          </div>
+
+          <!-- Bot Feature Highlights -->
+          <div class="glass-card mt-3 feature-checklist">
+            <h4>✅ प्रणाली वैशिष्ट्ये (System Highlights)</h4>
+            <ul>
+              <li>🔹 <strong>मराठी संभाषण</strong> व इंग्रजी दोन्हीमध्ये अखंड कार्य</li>
+              <li>🔹 <strong>प्रत्येक टप्प्यावर</strong> नेव्हिगेशन (Main Menu, Back, Cart, Talk)</li>
+              <li>🔹 <strong>कीटकनाशकांसाठी</strong> थेट ढीग न दाखवता २-पायरी स्मार्ट निदान</li>
+              <li>🔹 <strong>स्टील/अँगलसाठी</strong> साइज व युनिट (Kg/Ton/Nos) निवड</li>
+              <li>🔹 <strong>Meta Cloud API & Twilio</strong> वेबहुक समर्थित</li>
+            </ul>
+          </div>
+        </aside>
+
+        <!-- Center Column: WhatsApp Mobile Mockup -->
+        <div class="phone-mockup-wrapper">
+          <div class="phone-frame">
+            <!-- Speaker notch & sensors -->
+            <div class="phone-notch">
+              <span class="notch-camera"></span>
+              <span class="notch-speaker"></span>
+            </div>
+
+            <!-- Mobile Screen -->
+            <div class="phone-screen">
+              <!-- Phone Status Bar -->
+              <div class="phone-status-bar">
+                <span class="status-time" id="status-clock">12:30</span>
+                <div class="status-icons">
+                  <span>📶</span>
+                  <span>5G</span>
+                  <span>🔋 98%</span>
+                </div>
+              </div>
+
+              <!-- WhatsApp App Header -->
+              <div class="wa-header">
+                <div class="wa-header-left">
+                  <button class="wa-back-arrow" onclick="sendQuickMessage('*')" title="मागे जा">‹</button>
+                  <div class="wa-avatar-wrap">
+                    <div class="wa-avatar">🌾</div>
+                    <span class="wa-online-dot"></span>
+                  </div>
+                  <div class="wa-contact-info">
+                    <div class="wa-contact-name">
+                      <span>Vallabh Seeds & Fertilizers</span>
+                      <span class="verified-badge" title="वेरीफाईड व्यावसायिक खाते">✓</span>
+                    </div>
+                    <span class="wa-contact-status" id="wa-header-status">online • WhatsApp Business</span>
+                  </div>
+                </div>
+                <div class="wa-header-actions">
+                  <button class="wa-action-icon" onclick="sendQuickMessage('9')" title="कॉल करा">📞</button>
+                  <button class="wa-action-icon" onclick="toggleCartDrawer()" title="ऑर्डर सूची">
+                    🛒
+                    <span class="cart-pill-badge" id="cart-counter">0</span>
+                  </button>
+                  <button class="wa-action-icon" onclick="resetConversation()" title="मेनू">⋮</button>
+                </div>
+              </div>
+
+              <!-- WhatsApp Chat Thread Area -->
+              <div class="wa-chat-container" id="wa-chat-container">
+                <!-- Messages will be dynamically rendered here -->
+                <div class="wa-encryption-notice">
+                  🔒 वल्लभ सीड्स अँड फर्टिलायझर्स व्यावसायिक चॅट. आपले संभाषण सुरक्षित आहे.
+                </div>
+              </div>
+
+              <!-- Interactive Buttons Bar (Appears when bot provides buttons) -->
+              <div class="wa-interactive-tray" id="wa-interactive-tray"></div>
+
+              <!-- Universal Sticky Bottom Navigation (Requirement 7) -->
+              <div class="wa-universal-nav">
+                <button class="univ-nav-btn" onclick="sendQuickMessage('0')" title="मुख्य मेनू">
+                  <span>🏠</span>
+                  <label>मुख्य मेनू</label>
+                </button>
+                <button class="univ-nav-btn" onclick="sendQuickMessage('*')" title="मागे जा">
+                  <span>⬅️</span>
+                  <label>मागे जा</label>
+                </button>
+                <button class="univ-nav-btn" onclick="sendQuickMessage('#')" title="माझी ऑर्डर">
+                  <span>🛒</span>
+                  <label>माझी ऑर्डर</label>
+                </button>
+                <button class="univ-nav-btn" onclick="sendQuickMessage('9')" title="तज्ज्ञांशी संपर्क">
+                  <span>📞</span>
+                  <label>तज्ज्ञ संपर्क</label>
+                </button>
+              </div>
+
+              <!-- WhatsApp Input Bar -->
+              <div class="wa-input-bar">
+                <button class="wa-input-btn" title="इमोजी">😊</button>
+                <input 
+                  type="text" 
+                  id="wa-message-input" 
+                  class="wa-input-field" 
+                  placeholder="संदेश किंवा पर्याय नंबर टाईप करा..." 
+                  autocomplete="off"
+                  onkeydown="handleInputKeydown(event)"
+                >
+                <button class="wa-input-btn" title="माध्यम">📎</button>
+                <button class="wa-send-btn" id="wa-send-btn" onclick="sendMessageFromInput()" title="पाठवा">
+                  <span>➤</span>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Live Session Inspector & Cart Preview -->
+        <aside class="sidebar-inspector">
+          <!-- Live Session State Card -->
+          <div class="glass-card">
+            <div class="card-header">
+              <span class="card-icon">🧠</span>
+              <h3>बॉट सेशन स्थिती (State Engine)</h3>
+            </div>
+            
+            <div class="state-metrics">
+              <div class="state-metric-row">
+                <span class="metric-label">वर्तमान प्रवाह (Current Flow):</span>
+                <span class="metric-value badge" id="state-current-flow">MAIN_MENU</span>
+              </div>
+              <div class="state-metric-row">
+                <span class="metric-label">इतिहास खोली (Back Stack):</span>
+                <span class="metric-value" id="state-history-depth">० पायऱ्या</span>
+              </div>
+              <div class="state-metric-row">
+                <span class="metric-label">मोबाईल क्रमांक:</span>
+                <span class="metric-value" id="state-user-phone">+91 98765 43210</span>
+              </div>
+            </div>
+
+            <!-- Marathi Number Pad Helper -->
+            <div class="mt-3">
+              <h4 class="subheading">द्रुत नंबर कीपॅड (Quick Dialpad):</h4>
+              <div class="dialpad-grid">
+                <button class="dp-btn" onclick="sendQuickMessage('1')">1️⃣</button>
+                <button class="dp-btn" onclick="sendQuickMessage('2')">2️⃣</button>
+                <button class="dp-btn" onclick="sendQuickMessage('3')">3️⃣</button>
+                <button class="dp-btn" onclick="sendQuickMessage('4')">4️⃣</button>
+                <button class="dp-btn" onclick="sendQuickMessage('5')">5️⃣</button>
+                <button class="dp-btn" onclick="sendQuickMessage('6')">6️⃣</button>
+                <button class="dp-btn" onclick="sendQuickMessage('7')">7️⃣</button>
+                <button class="dp-btn" onclick="sendQuickMessage('8')">8️⃣</button>
+                <button class="dp-btn" onclick="sendQuickMessage('9')">9️⃣</button>
+                <button class="dp-btn" onclick="sendQuickMessage('*')">*️⃣ मागे</button>
+                <button class="dp-btn" onclick="sendQuickMessage('0')">0️⃣ मेनू</button>
+                <button class="dp-btn" onclick="sendQuickMessage('#')">#️⃣ ऑर्डर</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Cart Card -->
+          <div class="glass-card mt-3">
+            <div class="card-header">
+              <span class="card-icon">🛒</span>
+              <h3>थेट ऑर्डर बास्केट (Live Cart)</h3>
+              <span class="badge" id="inspector-cart-count">० वस्तू</span>
+            </div>
+            
+            <div id="inspector-cart-items" class="inspector-cart-list">
+              <p class="empty-state-text">सध्या कार्टमध्ये काहीही नाही. उत्पादने निवडून ऑर्डर करा.</p>
+            </div>
+
+            <div class="cart-total-box" id="inspector-cart-total-box" style="display: none;">
+              <div class="total-row">
+                <span>एकूण अंदाजे रक्कम:</span>
+                <strong id="inspector-cart-total">₹0</strong>
+              </div>
+              <button class="btn-primary w-100 mt-2" onclick="sendQuickMessage('ऑर्डर कन्फर्म')">
+                ✅ चेकआउट करा (Confirm Order)
+              </button>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- VIEW 2: Admin Dashboard View -->
+    <section id="view-admin" class="view-panel">
+      <div class="admin-layout">
+        
+        <!-- Admin Subnav -->
+        <div class="admin-subnav">
+          <button class="admin-tab-btn active" onclick="switchAdminTab('rates')">
+            📊 आजचे भाव (Daily Rates)
+          </button>
+          <button class="admin-tab-btn" onclick="switchAdminTab('products')">
+            🌾 उत्पादने व साठा (Products)
+          </button>
+          <button class="admin-tab-btn" onclick="switchAdminTab('orders')">
+            📦 ग्राहकांच्या ऑर्डर्स (Orders)
+          </button>
+          <button class="admin-tab-btn" onclick="switchAdminTab('whatsapp-setup')">
+            🔌 WhatsApp API कॉन्फिग
+          </button>
+          <button class="admin-tab-btn" onclick="switchAdminTab('store-info')">
+            🏪 दुकानाची माहिती (Store Info)
+          </button>
+        </div>
+
+        <!-- Admin Tab 1: Daily Rates Management -->
+        <div id="admin-tab-rates" class="admin-tab-content active">
+          <div class="content-header">
+            <div>
+              <h2>आजचे ताजे बाजारभाव व्यवस्थापन</h2>
+              <p class="text-muted">येथून बदललेले दर ग्राहकांना बॉटमध्ये त्वरित दिसतील.</p>
+            </div>
+            <button class="btn-primary" onclick="showNotification('दर यशस्वीरीत्या अद्ययावत केले!')">
+              💾 सर्व दर सेव्ह करा
+            </button>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>वर्गवारी (Category)</th>
+                  <th>वस्तूचे नाव (Item)</th>
+                  <th>चालू दर (Current Rate)</th>
+                  <th>एकक (Unit)</th>
+                  <th>शेवटचे अपडेट</th>
+                  <th>कृती</th>
+                </tr>
+              </thead>
+              <tbody id="rates-table-body">
+                <!-- Rates populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Admin Tab 2: Products Catalog -->
+        <div id="admin-tab-products" class="admin-tab-content">
+          <div class="content-header">
+            <div>
+              <h2>उत्पादने व इन्व्हेंटरी सूची</h2>
+              <p class="text-muted">बियाणे, खते, कीटकनाशके, सिमेंट, स्टील व पाईप्सचे व्यवस्थापन.</p>
+            </div>
+            <div class="header-filters">
+              <select id="product-category-filter" class="form-select" onchange="filterProductsTable()">
+                <option value="ALL">सर्व वर्गवारी (All Categories)</option>
+                <option value="seeds">🌾 बियाणे (Seeds)</option>
+                <option value="fertilizers">🧪 खते (Fertilizers)</option>
+                <option value="pesticides">🌿 कीटकनाशके (Pesticides)</option>
+                <option value="cement">🏗️ सिमेंट (Cement)</option>
+                <option value="steel">🔩 स्टील / TMT (Steel)</option>
+                <option value="ms_angle">📐 MS अँगल व चॅनल</option>
+                <option value="pvc_pipe">🚿 PVC व शेती पाईप</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>नाव (Name)</th>
+                  <th>ब्रँड (Brand)</th>
+                  <th>पॅकिंग / साईझ</th>
+                  <th>किंमत (Price)</th>
+                  <th>उपलब्धता (Status)</th>
+                  <th>कृती</th>
+                </tr>
+              </thead>
+              <tbody id="products-table-body">
+                <!-- Products populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Admin Tab 3: Customer Orders & Inquiries -->
+        <div id="admin-tab-orders" class="admin-tab-content">
+          <div class="content-header">
+            <div>
+              <h2>ग्राहकांच्या ऑर्डर्स व चौकशी</h2>
+              <p class="text-muted">व्हॉट्सअ‍ॅप बॉटद्वारे आलेल्या ग्राहकांच्या ऑर्डर्सची थेट नोंद.</p>
+            </div>
+            <button class="btn-secondary" onclick="loadAdminOrders()">
+              🔄 रीफ्रेश करा
+            </button>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ऑर्डर ID</th>
+                  <th>ग्राहक नाव व फोन</th>
+                  <th>गाव / पत्ता</th>
+                  <th>साहित्य (Items)</th>
+                  <th>एकूण रक्कम</th>
+                  <th>स्थिती (Status)</th>
+                  <th>तारीख</th>
+                  <th>बदला</th>
+                </tr>
+              </thead>
+              <tbody id="orders-table-body">
+                <!-- Orders populated by JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Admin Tab 4: WhatsApp Integration Setup -->
+        <div id="admin-tab-whatsapp-setup" class="admin-tab-content">
+          <div class="content-header">
+            <div>
+              <h2>WhatsApp जोडणी (Connect Real WhatsApp Account)</h2>
+              <p class="text-muted">आपल्या प्रत्यक्ष WhatsApp Business क्रमांकाशी बॉट त्वरित जोडा.</p>
+            </div>
+          </div>
+
+          <!-- Direct QR Scan Method for Existing Phone -->
+          <div class="glass-card mb-4" style="border: 2px solid rgba(37, 211, 102, 0.4); background: rgba(18, 140, 126, 0.08); margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+              <div>
+                <span class="badge" style="background:#25d366; color:#0b141a; font-weight:700; margin-bottom:8px; display:inline-block;">
+                  ⭐ सर्वोत्तम व जलद पद्धत (Recommended for Existing WhatsApp)
+                </span>
+                <h3 style="font-size: 20px; color: var(--wa-green); margin-bottom: 6px;">
+                  आपला सध्याचा WhatsApp Business नंबर थेट जोडा (QR Code Scan)
+                </h3>
+                <p style="color: var(--text-muted); font-size: 14px; max-width: 650px;">
+                  Meta Developer किंवा फेसबुक मंजुरीची गरज नाही! जसे आपण लॅपटॉपवर <strong>WhatsApp Web</strong> चालू करतो, तसेच आपल्या फोनवरून फक्त QR कोड स्कॅन करा. आपला बॉट थेट आपल्या सध्याच्या मोबाईल नंबरवर काम सुरू करेल!
+                </p>
+              </div>
+              <div style="display:flex; gap:10px; align-items:center;">
+                <span id="baileys-status-pill" class="badge" style="font-size:13px; padding:6px 12px;">⚪ तपासत आहे...</span>
+                <button class="btn-primary" id="btn-start-qr" onclick="startWhatsAppQR()">
+                  📲 QR कोड जनरेट करा
+                </button>
+                <button class="btn-secondary" id="btn-logout-qr" style="display:none; color:#ff5252;" onclick="logoutWhatsAppQR()">
+                  डिस्कनेक्ट (Logout)
+                </button>
+              </div>
+            </div>
+
+            <!-- QR Display Section -->
+            <div id="qr-display-area" style="display: none; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-color);">
+              <div style="display: grid; grid-template-columns: auto 1fr; gap: 24px; align-items: center;">
+                <div style="background: #fff; padding: 12px; border-radius: 16px; width: fit-content; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+                  <img id="qr-image" src="" alt="WhatsApp QR Code" style="width: 220px; height: 220px; display: block;">
+                </div>
+                <div>
+                  <h4 style="font-size: 16px; margin-bottom: 10px; color: #fff;">📱 फोनवरून स्कॅन कसे करावे:</h4>
+                  <ol style="margin-left: 20px; color: var(--text-muted); font-size: 14px; display: flex; flex-direction: column; gap: 8px;">
+                    <li>आपल्या मोबाईलमध्ये <strong>WhatsApp Business</strong> अ‍ॅप उघडा.</li>
+                    <li>उजव्या कोपऱ्यातील ३ ठिपके (⋮) किंवा <strong>Settings</strong> वर टॅप करा.</li>
+                    <li><strong>Linked Devices (लिंक केलेली डिव्हाइसेस)</strong> निवडा.</li>
+                    <li><strong>Link a Device (डिव्हाइस लिंक करा)</strong> वर टॅप करून डावीकडील QR कोड स्कॅन करा.</li>
+                    <li><strong style="color:var(--wa-green);">झाले!</strong> आता कोणत्याही ग्राहकाने आपल्या दुकानाच्या नंबरवर मेसेज केला की बॉट त्वरित मराठीत उत्तरे देईल.</li>
+                  </ol>
+                </div>
+              </div>
+
+              <!-- Alternative: Pairing Code Method -->
+              <div style="margin-top: 24px; padding-top: 18px; border-top: 1px dashed rgba(255,255,255,0.15);">
+                <h4 style="font-size: 16px; color: var(--wa-green); margin-bottom: 8px;">
+                  ✨ किंवा ८-अंकी कोडने थेट लिंक करा (QR कोड स्कॅन होत नसल्यास सर्वोत्तम पर्याय!):
+                </h4>
+                <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 12px;">
+                  जर कॅमेऱ्याने QR स्कॅन करताना "Try again later" येत असेल, तर आपला व्हॉट्सअ‍ॅप नंबर टाकून त्वरित ८-अंकी पेअरिंग कोड मिळवा:
+                </p>
+                <div style="display: flex; gap: 10px; max-width: 500px; align-items: center;">
+                  <input type="text" id="pairing-phone-input" class="form-input" placeholder="उदा. 9822012345 किंवा +91..." style="flex:1;">
+                  <button class="btn-primary" onclick="requestPairingCodeUI()">🔑 कोड मिळवा</button>
+                </div>
+
+                <div id="pairing-code-box" style="display: none; margin-top: 14px; background: rgba(0,0,0,0.5); padding: 14px 18px; border-radius: 12px; border: 1px solid var(--wa-green); max-width: 500px;">
+                  <span style="font-size: 13px; color: var(--text-muted); display: block;">आपल्या WhatsApp वर हा ८-अंकी कोड टाईप करा:</span>
+                  <div id="pairing-code-display" style="font-size: 32px; font-weight: 800; color: var(--wa-green); letter-spacing: 6px; font-family: monospace; margin: 8px 0;">
+                    ----
+                  </div>
+                  <span style="font-size: 12.5px; color: #fff; line-height: 1.4; display: block;">
+                    👉 मोबाईलवर: <strong>Linked Devices</strong> ➔ <strong>Link a Device</strong> ➔ खाली <strong>"Link with phone number instead"</strong> वर क्लिक करा आणि हा कोड टाका.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Connected Banner -->
+            <div id="qr-connected-banner" style="display:none; margin-top:16px; padding:16px; background:rgba(37,211,102,0.15); border:1px solid var(--wa-green); border-radius:12px;">
+              <h4 style="color:var(--wa-green); font-size:16px;">✅ प्रत्यक्ष WhatsApp यशस्वीरीत्या जोडले गेले आहे!</h4>
+              <p style="color:var(--text-main); font-size:14px; margin-top:4px;">
+                जोडलेला मोबाईल क्रमांक: <strong id="connected-phone-display" style="font-family:var(--font-ui);">+91 ...</strong><br>
+                आता आपल्या मोबाईल नंबरवर येणाऱ्या संदेशांना बॉट स्वयंचलित प्रतिसाद देत आहे. आपण स्वतःही फोनवरून संभाषण पाहू आणि बोलू शकता.
+              </p>
+            </div>
+          </div>
+
+          <div class="setup-grid">
+            <div class="setup-card">
+              <h3>१. Meta WhatsApp Business Cloud API (अधिकृत पद्धत)</h3>
+              <p>फेसबुक डेव्हलपर पोर्टल (developers.facebook.com) वर खालील Webhook URL प्रविष्ट करा:</p>
+              
+              <div class="code-box">
+                <label>Webhook Callback URL:</label>
+                <code>https://&lt;your-domain&gt;/webhook</code>
+              </div>
+
+              <div class="code-box mt-2">
+                <label>Verify Token (व्हेरिफाय टोकन):</label>
+                <code>vallabh_seeds_secret_token</code>
+              </div>
+
+              <div class="code-box mt-2">
+                <label>Webhooks Subscribed Fields:</label>
+                <code>messages, messaging_postbacks</code>
+              </div>
+
+              <p class="mt-2 text-sm text-muted">
+                पर्यावरणातील व्हेरिएबल्स (.env):<br>
+                <code>WHATSAPP_PHONE_NUMBER_ID=...</code><br>
+                <code>WHATSAPP_ACCESS_TOKEN=...</code>
+              </p>
+            </div>
+
+            <div class="setup-card">
+              <h3>२. Twilio WhatsApp Webhook जोडणी</h3>
+              <p>आपल्या Twilio कन्सोलमध्ये WhatsApp Sandbox किंवा Production Number साठी खालील URL टाका:</p>
+
+              <div class="code-box">
+                <label>WHEN A MESSAGE COMES IN (Webhook):</label>
+                <code>https://&lt;your-domain&gt;/webhook/twilio</code>
+              </div>
+
+              <div class="code-box mt-2">
+                <label>HTTP Method:</label>
+                <code>HTTP POST</code>
+              </div>
+
+              <div class="mt-3">
+                <h4>३. थेट स्थानिक चाचणी (No API setup needed for testing!):</h4>
+                <p>याच वेब अ‍ॅपमधील "WhatsApp सिम्युलेटर" टॅब वापरून संपूर्ण बॉट लगेच चाचणी करा. कोणत्याही API की ची वाट पाहण्याची गरज नाही!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Admin Tab 5: Store Information -->
+        <div id="admin-tab-store-info" class="admin-tab-content">
+          <div class="content-header">
+            <div>
+              <h2>दुकानाची माहिती व कृषी सल्लागार संपर्क</h2>
+              <p class="text-muted">बॉटमध्ये ग्राहकांना दाखवली जाणारी माहिती येथून बदला.</p>
+            </div>
+            <button class="btn-primary" onclick="saveStoreInfo()">
+              💾 माहिती सेव्ह करा
+            </button>
+          </div>
+
+          <div class="store-form-grid">
+            <div class="form-group">
+              <label>दुकानाचे नाव (इंग्रजी):</label>
+              <input type="text" id="store-name" class="form-input" value="Vallabh Seeds & Fertilizers">
+            </div>
+
+            <div class="form-group">
+              <label>दुकानाचे नाव (मराठी):</label>
+              <input type="text" id="store-name-mr" class="form-input" value="वल्लभ सीड्स अँड फर्टिलायझर्स">
+            </div>
+
+            <div class="form-group full-width">
+              <label>दुकानाचा पत्ता:</label>
+              <input type="text" id="store-address" class="form-input" value="दुकान क्र. १२-१४, कृषी उत्पन्न बाजार समिती परिसर (APMC Market), मुख्य रोड, जालना - ४३१२०३ (महाराष्ट्र)">
+            </div>
+
+            <div class="form-group">
+              <label>मुख्य फोन नंबर:</label>
+              <input type="text" id="store-phone-1" class="form-input" value="+91 98220 12345">
+            </div>
+
+            <div class="form-group">
+              <label>दुय्यम फोन नंबर:</label>
+              <input type="text" id="store-phone-2" class="form-input" value="+91 94231 67890">
+            </div>
+
+            <div class="form-group">
+              <label>कृषी तज्ज्ञ व सल्लागार नाव:</label>
+              <input type="text" id="store-expert-name" class="form-input" value="श्री. सचिन पाटील (M.Sc. Agriculture)">
+            </div>
+
+            <div class="form-group">
+              <label>तज्ज्ञांचा थेट मोबाईल:</label>
+              <input type="text" id="store-expert-phone" class="form-input" value="+91 98221 55667">
+            </div>
+
+            <div class="form-group">
+              <label>दुकान उघडण्याची वेळ:</label>
+              <input type="text" id="store-timings" class="form-input" value="सकाळी ८:०० ते रात्री ८:३० (आठवड्याचे सर्व ७ दिवस सुरू)">
+            </div>
+
+            <div class="form-group">
+              <label>पेमेंट UPI ID:</label>
+              <input type="text" id="store-upi" class="form-input" value="vallabhseeds@upi">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive List Bottom Sheet Modal (WhatsApp Native Style) -->
+  <div class="modal-overlay" id="list-sheet-modal" onclick="closeListSheet(event)">
+    <div class="list-sheet-box" onclick="event.stopPropagation()">
+      <div class="sheet-drag-handle"></div>
+      <div class="sheet-header">
+        <h4 id="sheet-title">पर्याय निवडा</h4>
+        <button class="sheet-close-btn" onclick="closeListSheet()">✕</button>
+      </div>
+      <div class="sheet-content" id="sheet-items-container">
+        <!-- Rendered list items -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast-message"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
